@@ -1,0 +1,14 @@
+{
+  "name": "css-scrolling-parallax",
+  "version": "1.0.0",
+  "description": "This is the repository for the LinkedIn Learning course on CSS Scrolling and Parallax. The full course is available from [LinkedIn Learning](https://www.linkedin.com/learning/instructors/ray-villalobos).",
+  "author": "Ray Villalobos",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  }
+}
