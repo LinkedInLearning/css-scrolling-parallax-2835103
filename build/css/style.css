@@ -1,10 +1,137 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
+.site-nav {
+  background: rgba(99, 64, 145, 1);
+  z-index: 20;
+}
+
+.site-nav .nav-link {
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 2px;
+}
+
+.site-nav .nav-link:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.site-nav .nav-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 .site-header {
-  background: url(../images/hero.svg);
-  background-position: center bottom;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(103, 66, 150), rgb(54, 28, 88));
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(../images/hero.svg);
+  animation: clear 1.25s forwards;
+  transform: translateY(-5rem);
+  opacity: 0;
+}
+
+.site-header::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .site-header .layout-hero {
-  min-height: 50vh;
+  height: 100%;
+}
+
+.header-title {
+  animation: clear 0.8s 0.4s forwards;
+  transform: translateY(10rem);
+  text-shadow: 10px 10px 20px black;
+  opacity: 0;
+}
+
+.header-subtitle {
+  animation: clear 1s 0.7s forwards;
+  transform: translateY(10rem);
+  opacity: 0;
+  z-index: 10;
+}
+.header-cue {
+  animation: clear 0.5s 1.5s forwards;
+  transform: translateY(2rem);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.header-cue-icon {
+  animation: slide-down 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
+  transform: translateY(-2rem);
+}
+
+.scroll-trigger {
+  opacity: 0;
+}
+
+.visible {
+  animation: clear 1s 0.2s forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@keyframes clear {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: none;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
