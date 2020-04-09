@@ -10,7 +10,7 @@
   <title>CSS Scrolling &amp; Parallax</title>
 </head>
 
-<body class="font-weight-light">
+<body>
   <nav class="site-nav text-uppercase navbar navbar-expand-md navbar-dark position-fixed w-100">
     <div class="container-fluid">
       <a class="navbar-brand font-weight-normal" href="#page-hero">
@@ -43,7 +43,7 @@
     </section>
   </header>
 
-  <article id="meet" class="page-section text-center py-5 visible scroll-trigger">
+  <article id="meet" class="page-section text-center py-5 visible">
     <header class="container">
       <h1 class="display-4 text-danger font-weight-lighter mb-0">Meet The Monsters</h1>
       <p class="lead">With a wide range of backgrounds, skills, and personality, the LiL Monsters are a team to reckon with. There’s little they can’t achieve when they put their monster minds together.</p>
@@ -117,26 +117,27 @@
     </section>
   </article>
 
+  <div id="pin-trigger"></div>
   <article id="types" class="page-section bg-warning text-center py-5">
     <header class="container mb-3">
       <h1 class="display-4 text-danger font-weight-lighter mb-0">Monster Types</h1>
     </header>
     <section class="container">
       <div class="row row-cols-1 row-cols-md-3">
-        <section class="col">
-          <img class="icon layout-icon scroll-trigger" src="images/icon01.svg" style="height: 200px;" alt="Icon 01">
+        <section id="type-horns" class="col">
+          <img class="icon layout-icon" src="images/icon01.svg" style="height: 200px;" alt="Icon 01">
           <h3 class="text-danger font-weight-light">Horns</h3>
           <p class="">Horns on monsters likely originated as a means for self-defense. However, nowadays they're more commonly used for
             such routine tasks as opening cans, digging in the garden,and flipping burgers on the grill.</p>
         </section>
         <section class="col">
-          <img class="icon layout-icon scroll-trigger" src="images/icon02.svg" style="height: 200px;" alt="Icon 02">
+          <img class="icon layout-icon" src="images/icon02.svg" style="height: 200px;" alt="Icon 02">
           <h3 class="text-danger font-weight-light">Tentacles</h3>
           <p class="">Monsters with tentacles can mop the floor, cook dinner, and type a winning proposal, all while sipping a steaming
             hot latte. Their multitasking ability is a talent many aspire to, but most will never achieve.</p>
         </section>
         <section class="col">
-          <img class="icon layout-icon scroll-trigger" src="images/icon03.svg" style="height: 200px;" alt="Icon 03">
+          <img class="icon layout-icon" src="images/icon03.svg" style="height: 200px;" alt="Icon 03">
           <h3 class="text-danger font-weight-light">Periscope Eyes</h3>
           <p class="">Periscope-eyed monsters can watch a football game in the family room, while "keeping an eye" on what's simmering
             on the stove. Many are also astute detectives who find satisfying work in law enforcement.</p>
@@ -232,6 +233,7 @@
 
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/lib/bootstrap.bundle.min.js"></script>
+  <script src="js/lib/ScrollMagic.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

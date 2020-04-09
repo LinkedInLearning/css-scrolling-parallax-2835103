@@ -3,8 +3,14 @@ html {
 }
 
 .site-nav {
-  background: rgba(99, 64, 145, 1);
+  background: rgba(99, 64, 145, 0);
   z-index: 20;
+}
+
+.site-nav.in-body {
+  background: rgba(99, 64, 145, 0.9);
+  animation: clear 1.25s forwards;
+  opacity: 0;
 }
 
 .site-nav .nav-link {
@@ -69,36 +75,44 @@ html {
   height: 100%;
 }
 
-.header-title {
+.site-header .header-title {
   animation: clear 0.8s 0.4s forwards;
   transform: translateY(10rem);
   text-shadow: 10px 10px 20px black;
   opacity: 0;
 }
 
-.header-subtitle {
+.site-header .header-subtitle {
   animation: clear 1s 0.7s forwards;
   transform: translateY(10rem);
   opacity: 0;
   z-index: 10;
 }
-.header-cue {
+
+.site-header .header-cue {
   animation: clear 0.5s 1.5s forwards;
   transform: translateY(2rem);
   z-index: 10;
   overflow: hidden;
 }
 
-.header-cue-icon {
+.site-header .header-cue-icon {
   animation: slide-down 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
   transform: translateY(-2rem);
+  opacity: 1;
 }
 
-.scroll-trigger {
+#meet .scroll-trigger {
   opacity: 0;
 }
 
-.visible {
+.site-header .header-cue-icon {
+  animation: clear 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
+  transform: translateY(-2rem);
+  opacity: 1;
+}
+
+#meet .visible {
   animation: clear 1s 0.2s forwards;
   opacity: 0;
   transform: scale(0.9);
