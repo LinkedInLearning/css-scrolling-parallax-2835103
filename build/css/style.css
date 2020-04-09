@@ -36,6 +36,7 @@ html {
   position: relative;
   height: 100vh;
   background: linear-gradient(180deg, rgb(103, 66, 150), rgb(54, 28, 88));
+  overflow: hidden;
 }
 
 .site-header::before {
@@ -52,6 +53,7 @@ html {
   background-image: url(../images/hero.svg);
   animation: clear 1.25s forwards;
   transform: translateY(-5rem);
+  transform: scale(1.2);
   opacity: 0;
 }
 
