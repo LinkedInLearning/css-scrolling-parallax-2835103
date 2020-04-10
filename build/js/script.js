@@ -57,13 +57,17 @@ $(function () {
   }
   window.requestAnimationFrame(cycleThroughMonsters)
 
-  let controller = new ScrollMagic.Controller()
+  let controller = new ScrollMagic.Controller({ addIndicators: true })
 
   // create a scene
   let scene = new ScrollMagic.Scene({
-    triggerElement: '#pin-trigger',
+    triggerElement: '#types',
+    triggerHook: 0,
+    offset: -70,
     duration: 500,
-  }).setPin('#types')
+  })
+    .setTween('#type-horns', 0.1, { fill: 'red', scale: 2.5, opacity: 0 })
+    .setPin('#types')
 
   controller.addScene(scene)
 })
