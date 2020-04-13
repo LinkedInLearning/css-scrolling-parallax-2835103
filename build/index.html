@@ -13,11 +13,32 @@
   </head>
 
   <body>
-    <a href="#page-hero">LiL Monsters</a>
-    <a href="#meet">meet</a>
-    <a href="#types">types</a>
-    <a href="#friend">friend</a>
-    <a href="#hire">hire</a>
+    <nav
+      class="site-nav text-uppercase navbar navbar-expand-md navbar-dark w-100 bg-primary"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand font-weight-normal" href="#page-hero">
+          <i class="fas fa-cube mr-2"></i>LiL Monsters</a
+        >
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#myTogglerNav"
+          aria-controls="#myTogglerNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="collapse navbar-collapse" id="myTogglerNav">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="#meet">meet</a>
+            <a class="nav-item nav-link" href="#types">types</a>
+            <a class="nav-item nav-link" href="#friend">friend</a>
+            <a class="nav-item nav-link" href="#hire">hire</a>
+          </div>
+        </section>
+      </div>
+    </nav>
 
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/bootstrap.bundle.min.js"></script>
