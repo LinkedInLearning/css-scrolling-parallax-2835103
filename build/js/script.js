@@ -59,7 +59,7 @@ $(function () {
 
   //Let the ScrollMagic Begin
 
-  let controller = new ScrollMagic.Controller({ addIndicators: true })
+  let controller = new ScrollMagic.Controller()
 
   // Monster Types Scene 01 --------------------------
   let typesTween = new TimelineMax()
@@ -77,6 +77,7 @@ $(function () {
     triggerHook: 0,
   })
     .setTween(typesTween)
+    .addIndicators({ name: 'Types 01' })
     .setPin('#types')
 
   controller.addScene(typesScene01)
@@ -87,9 +88,6 @@ $(function () {
   typesTween02.staggerFrom('#types .col', 1.25, {
     scale: 0.5,
     opacity: 0,
-    cycle: {
-      y: [500],
-    },
     ease: Elastic.easeOut,
     stagger: {
       amount: 0.25,
@@ -102,7 +100,9 @@ $(function () {
     triggerHook: 0,
     offset: 200,
     duration: 300,
-  }).setTween(typesTween02)
+  })
+    .setTween(typesTween02)
+    .addIndicators({ name: 'Types 02' })
   controller.addScene(typesScene02)
 
   // Parachute Friend --------------------------
@@ -131,7 +131,9 @@ $(function () {
   let friendScene = new ScrollMagic.Scene({
     triggerElement: '#friend',
     duration: '170%',
-  }).setTween(friendTween)
+  })
+    .setTween(friendTween)
+    .addIndicators({ name: 'Parachute' })
   controller.addScene(friendScene)
 
   var friendTextTween = TweenMax.staggerFromTo(
@@ -147,6 +149,8 @@ $(function () {
     triggerElement: '#friend',
     triggerHook: 0,
     duration: '10%',
-  }).setTween(friendTextTween)
+  })
+    .setTween(friendTextTween)
+    .addIndicators({ name: 'Friend Text' })
   controller.addScene(friendText)
 })
