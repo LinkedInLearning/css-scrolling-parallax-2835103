@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 .site-nav {
   background: rgba(99, 64, 145, 0);
   z-index: 20;
@@ -113,6 +117,10 @@
   animation: clear 1s 0.2s forwards;
   opacity: 0;
   transform: scale(0.9);
+}
+
+#friend {
+  overflow: hidden;
 }
 
 @keyframes clear {

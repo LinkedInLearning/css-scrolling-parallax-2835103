@@ -117,10 +117,26 @@
     </section>
   </article>
 
-  <div id="pin-trigger"></div>
+  <article id="friend" class="page-section bg-info min-vh-100 d-flex flex-column justify-content-center">
+    <section class="layout-floater container py-5">
+      <div class="row align-items-center justify-content-center">
+        <section class="layout-container col-8 col-md-4">
+          <img id="parachute" class="layout-image " src="images/floater.svg" alt="Floater Image">
+        </section>
+        <section class="col-10 col-md-6 text-center text-md-left pl-md-5">
+          <h1 class="friend-text font-weight-bolder text-warning">You've Got a Friend</h1>
+          <p class="friend-text">When you hang with monsters, you've got the best friends in the world. Feeling down? They'll make your spirits
+            soar. Stomach rumbling? They'll whip you up a satisfying snack. Crave adventure? They'll explore the world with
+            you. You're one lucky individual!
+          </p>
+        </section>
+      </div>
+    </section>
+  </article>
+
   <article id="types" class="page-section bg-warning text-center min-vh-100 py-5 d-flex flex-column justify-content-center">
     <header class="container mb-3">
-      <h1 class="display-4 text-danger font-weight-lighter mb-0">Monster Types</h1>
+      <h1 class="display-4 text-danger font-weight-lighter mb-5">Monster Types</h1>
     </header>
     <section class="container">
       <div class="row row-cols-1 row-cols-md-3">
@@ -146,22 +162,7 @@
     </section>
   </article>
 
-  <article id="friend" class="page-section">
-    <section class="layout-floater container py-5">
-      <div class="row align-items-center justify-content-center">
-        <section class="layout-container col-8 col-md-4">
-          <img class="layout-image " src="images/floater.svg" alt="Floater Image">
-        </section>
-        <section class="col-10 col-md-6 text-center text-md-left pl-md-5">
-          <h1 class="text-danger font-weight-lighter">You've Got a Friend</h1>
-          <p class="">When you hang with monsters, you've got the best friends in the world. Feeling down? They'll make your spirits
-            soar. Stomach rumbling? They'll whip you up a satisfying snack. Crave adventure? They'll explore the world with
-            you. You're one lucky individual!
-          </p>
-        </section>
-      </div>
-    </section>
-  </article>
+
 
   <article id="hire" class="page-section">
     <section class="layout-cards container">
@@ -233,7 +234,7 @@
 
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/lib/bootstrap.bundle.min.js"></script>
-  <script src="js/lib/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="js/lib/ScrollMagic.js"></script>
   <script src="js/lib/plugins/animation.gsap.js"></script>
   <script src="js/lib/plugins/debug.addIndicators.js"></script>
