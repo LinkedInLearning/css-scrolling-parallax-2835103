@@ -21,7 +21,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  opacity: 0.6;
+  opacity: 1;
+  animation: slideUp 0.5s forwards;
 }
 
 .site-nav .nav-link {
@@ -39,7 +40,7 @@
   left: 0;
   background-color: rgba(266, 207, 31, 0);
   transform: scaleX(0);
-  transition: all 0.5s cubic-bezier(0.03, 0.78, 0.4, 1.39);
+  transition: all 3s cubic-bezier(0.03, 0.78, 0.4, 1.39);
   opacity: 0;
 }
 
@@ -47,4 +48,16 @@
   background-color: rgba(266, 207, 31, 0.2);
   transform: scaleX(1);
   opacity: 1;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(300px) scale(1.2);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
 }
