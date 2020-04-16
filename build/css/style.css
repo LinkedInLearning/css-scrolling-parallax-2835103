@@ -21,8 +21,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  opacity: 1;
-  animation: slideUp 0.5s forwards;
+  opacity: 0.6;
+  animation: clear 0.5s forwards;
+  transform: translateY(-5rem);
+  transform: scale(1.2);
+  opacity: 0;
 }
 
 .site-nav .nav-link {
@@ -50,6 +53,20 @@
   opacity: 1;
 }
 
+.site-header .header-title {
+  line-height: 80%;
+  animation: clear 0.8s 0.4s forwards;
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+.site-header .header-subtitle {
+  animation: clear 1s 0.7s forwards;
+  transform: translateY(10rem);
+  opacity: 0;
+  z-index: 10;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(300px) scale(1.2);
@@ -59,5 +76,12 @@
   to {
     transform: translateY(0);
     opacity: 0.6;
+  }
+}
+
+@keyframes clear {
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
