@@ -63,21 +63,52 @@
   opacity: 0;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(300px) scale(1.2);
-    opacity: 0;
-  }
+.site-header .header-cue {
+  animation: clear 0.5s 1.5s forwards;
+  transform: translateY(2rem);
+  z-index: 10;
+  overflow: hidden;
+}
 
-  to {
-    transform: translateY(0);
-    opacity: 0.6;
-  }
+.site-header .header-cue-icon {
+  animation: slide-down 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
+  transform: translateY(-2rem);
+  opacity: 1;
 }
 
 @keyframes clear {
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
