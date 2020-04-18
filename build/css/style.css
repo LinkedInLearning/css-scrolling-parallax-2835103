@@ -6,6 +6,12 @@ html {
   z-index: 20;
 }
 
+.site-nav.in-body {
+  background: rgb(99, 64, 145, 0.9);
+  animation: clear 1.25s forwards;
+  opacity: 0;
+}
+
 .site-header {
   position: relative;
   height: 100vh;
