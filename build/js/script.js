@@ -3,11 +3,23 @@ $(function () {
   let nav = document.querySelector('.site-nav')
   let headerCue = document.querySelector('.header-cue')
   let meetMonsters = document.querySelector('#meet')
+  let yodel = document.querySelector('#yodel')
   let navHeight = nav.scrollHeight
+
+  function inViewPort(el) {
+    let rect = el.getBoundingClientRect()
+    return (
+      (rect.top <= 0 && rect.bottom >= 0) ||
+      (rect.bottom >= window.innerHeight && rect.top <= window.innerHeight) ||
+      (rect.top >= 0 && rect.bottom <= window.innerHeight)
+    )
+  }
 
   function moveHeader() {
     let top = window.pageYOffset
     let mainOnTop = meetMonsters.getBoundingClientRect().top - navHeight
+
+    console.log(inViewPort(yodel))
 
     mainOnTop < 0
       ? nav.classList.add('in-body')
