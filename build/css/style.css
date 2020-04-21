@@ -88,6 +88,12 @@ html {
   opacity: 1;
 }
 
+.appear {
+  animation: clear 1s 0.5s forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
 @keyframes clear {
   to {
     opacity: 1;

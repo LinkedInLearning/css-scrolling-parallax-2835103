@@ -3,7 +3,7 @@ $(function () {
   let nav = document.querySelector('.site-nav')
   let headerCue = document.querySelector('.header-cue')
   let meetMonsters = document.querySelector('#meet')
-  let yodel = document.querySelector('#yodel')
+  let monsterScroll = document.querySelectorAll('#monster-group .monster')
   let navHeight = nav.scrollHeight
 
   function inViewPort(el) {
@@ -19,8 +19,6 @@ $(function () {
     let top = window.pageYOffset
     let mainOnTop = meetMonsters.getBoundingClientRect().top - navHeight
 
-    console.log(inViewPort(yodel))
-
     mainOnTop < 0
       ? nav.classList.add('in-body')
       : nav.classList.remove('in-body')
@@ -34,6 +32,12 @@ $(function () {
     headerContent.style.transform = `translateY(-${top / 1.5}px)`
     headerContent.style.opacity =
       1 - Math.max(top / (window.innerHeight * 0.2), 0)
+
+    monsterScroll.forEach((item) =>
+      inViewPort(item)
+        ? item.classList.add('appear')
+        : item.classList.remove('appear')
+    )
 
     window.requestAnimationFrame(moveHeader)
   }
