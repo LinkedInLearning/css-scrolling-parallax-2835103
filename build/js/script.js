@@ -47,4 +47,11 @@ $(function () {
   }
 
   window.requestAnimationFrame(moveHeader)
+
+  let controller = new ScrollMagic.Controller()
+
+  new ScrollMagic.Scene({ triggerElement: '#friend' })
+    .setClassToggle('.friend-text', 'appear')
+    .addIndicators({ name: 'friends' })
+    .addTo(controller)
 })
