@@ -94,10 +94,6 @@ html {
   transform: scale(0.9);
 }
 
-.friend-text {
-  opacity: 0;
-}
-
 @keyframes clear {
   to {
     opacity: 1;
