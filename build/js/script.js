@@ -52,6 +52,8 @@ $(function () {
   let friendTextTween = TweenMax.from('.friend-text', {
     y: 400,
     opacity: 0,
+    duration: 2,
+    ease: 'elastic.inOut',
   })
 
   new ScrollMagic.Scene({
