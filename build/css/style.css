@@ -94,6 +94,11 @@ html {
   transform: scale(0.9);
 }
 
+#friend {
+  z-index: 100;
+  overflow: hidden;
+}
+
 @keyframes clear {
   to {
     opacity: 1;

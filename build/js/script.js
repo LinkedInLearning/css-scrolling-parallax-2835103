@@ -57,8 +57,10 @@ $(function () {
   new ScrollMagic.Scene({
     triggerElement: '#friend',
     duration: '100%',
+    triggerHook: 0,
   })
     .setTween(friendTextTween)
+    .setPin('#friend')
     .addIndicators({ name: 'friends' })
     .addTo(controller)
 })
