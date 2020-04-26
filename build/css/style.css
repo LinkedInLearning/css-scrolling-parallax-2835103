@@ -95,7 +95,7 @@ html {
 }
 
 #friend {
-  z-index: 100;
+  z-index: 15;
   overflow: hidden;
 }
 
