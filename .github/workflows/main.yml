@@ -1,0 +1,14 @@
+name: Copy To Branches SJM
+on:
+  workflow_dispatch:
+jobs:
+  copy-to-branches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Copy To Branches Action
+        uses: smoser-LiL/copy-to-branches-sjm@v1
+        env:
+          key: main
