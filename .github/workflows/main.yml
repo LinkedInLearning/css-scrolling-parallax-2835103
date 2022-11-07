@@ -1,4 +1,4 @@
-name: Copy To Branches
+name: Copy To Branches SJM
 on:
   workflow_dispatch:
 jobs:
@@ -9,6 +9,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Copy To Branches Action
-        uses: planetoftheweb/copy-to-branches@v1.2
+        uses: smoser-LiL/copy-to-branches-sjm@v1
         env:
           key: main
